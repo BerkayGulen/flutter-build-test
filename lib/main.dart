@@ -1,3 +1,4 @@
+import 'package:build_test_app/components/BarcodScannerWidget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,15 @@ class MyApp extends StatelessWidget {
         title: Text("Build Test App"),
         centerTitle: true,
       ),
-      body: Text("demo"),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            BarcodScannerWidget(),
+            Divider(height: 5,),
+          ],
+        ),
+      ),
     );
   }
 }
