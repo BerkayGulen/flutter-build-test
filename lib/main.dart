@@ -1,4 +1,5 @@
 import 'package:build_test_app/components/BarcodScannerWidget.dart';
+import 'package:build_test_app/components/Layout1.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
           children: [
             BarcodScannerWidget(),
             Divider(height: 5,),
+            Layout1(),
           ],
         ),
       ),
