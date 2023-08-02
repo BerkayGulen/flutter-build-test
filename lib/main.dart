@@ -2,6 +2,8 @@ import 'package:build_test_app/components/BarcodScannerWidget.dart';
 import 'package:build_test_app/components/Layout1.dart';
 import 'package:flutter/material.dart';
 
+import 'components/Home.dart';
+
 void main() {
   runApp(MaterialApp(
     title: 'Flutter Demo',
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
             BarcodScannerWidget(),
             Divider(height: 5,),
             Layout1(),
+            Divider(height: 5,),
+            Home(),
           ],
         ),
       ),
