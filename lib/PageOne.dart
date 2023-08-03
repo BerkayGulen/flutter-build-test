@@ -8,19 +8,21 @@ class PageOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return(
-    Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Column(
-        children: [
-          BarcodScannerWidget(),
-          Divider(height: 5,),
-          Layout1(),
-          Divider(height: 5,),
-          Home(),
-        ],
+    return SingleChildScrollView(
+      child: (
+      Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            BarcodScannerWidget(),
+            Divider(height: 5,),
+            Layout1(),
+            Divider(height: 5,),
+            Home(),
+          ],
+        ),
+      )
       ),
-    )
     );
   }
 }
