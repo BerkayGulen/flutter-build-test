@@ -10,4 +10,11 @@ class Contact {
       email: json["EMAIL"] as String?, // Cast to String?
     );
   }
+  Map<String, dynamic> toMap() {
+    return {
+      "NAME": name,
+      "EMAIL": email,
+    };
+  }
+
 }

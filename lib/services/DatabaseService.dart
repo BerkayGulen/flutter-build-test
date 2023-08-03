@@ -41,7 +41,7 @@ class DatabaseService{
     }
 
 // open the database
-    _db = await openDatabase(path, readOnly: true);
+    _db = await openDatabase(path,readOnly: false);
   }
 
    Future<List<Contact>> getAll() async {
@@ -59,6 +59,16 @@ class DatabaseService{
      } catch (e) {
        print("Error retrieving data: $e");
        return []; // Return an empty list in case of an error
+     }
+   }
+
+   Future<void> insert(Contact contact) async {
+     await initDatabase();
+
+     try {
+     await _db!.insert('Contact', contact.toMap());
+     } catch (e) {
+       print("Error inserting data: $e");
      }
    }
 
