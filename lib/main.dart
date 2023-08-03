@@ -1,5 +1,6 @@
 import 'package:build_test_app/PageOne.dart';
 import 'package:build_test_app/PageTwo.dart';
+import 'package:build_test_app/components/BarcodScannerV2.dart';
 import 'package:build_test_app/components/responsive/desktop_body.dart';
 import 'package:build_test_app/components/responsive/mobile_body.dart';
 import 'package:build_test_app/components/responsive/responsive_layout.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: Text("Build Test App"),
@@ -40,6 +41,9 @@ class MyApp extends StatelessWidget {
               ),
               Tab(
                 text: "page 3 Responsive",
+              ),
+              Tab(
+                text: "Barcod Scanner v2",
               )
             ],
           ),
@@ -49,7 +53,9 @@ class MyApp extends StatelessWidget {
             PageOne(),
             PageTwo(),
             ResponsiveLayout(
-                mobileBody: MyMobileBody(), desktopBody: MyDesktopBody())
+                mobileBody: MyMobileBody(), desktopBody: MyDesktopBody()),
+            BarcodScannerV2(),
+
           ],
         ),
       ));
