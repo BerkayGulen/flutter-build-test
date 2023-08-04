@@ -7,9 +7,9 @@ class MyMobileBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepPurple[200],
-      appBar: AppBar(
-        title: Text('M O B I L E'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('M O B I L E'),
+      // ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
